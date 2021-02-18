@@ -1,37 +1,18 @@
-# Forge Hello World
+In order to use the code from this repo you have to get a forge app token and deploy the app:
 
-This project contains a Forge app written in Javascript that displays `Hello World!` on the right panel of the Confluence homepage. 
-
-See [developer.atlassian.com/platform/forge/](https://developer.atlassian.com/platform/forge) for documentation and tutorials explaining Forge.
-
-## Requirements
-
-See [Set up Forge](https://developer.atlassian.com/platform/forge/set-up-forge/) for instructions to get set up.
-
-## Quick start
-
-- Modify your app by editing the `src/index.jsx` file.
-
-- Build and deploy your app by running:
+* use `forge create` in an empty directory
+* cope the app token from your `mainifest.yml` which looks like this:
 ```
-forge deploy
+app:
+  id: ari:cloud:ecosystem::app/<random Id>
+  name: <name>
 ```
+* paste this into the `manifest.yml` here
+* use `forge deploy` and `forge install` to install this app to your site
+* use `forge tunnel` to see the logs
 
-- Install your app in an Atlassian site by running:
-```
-forge install
-```
-
-- Develop your app by running `forge tunnel` to proxy invocations locally:
-```
-forge tunnel
-```
-
-### Notes
-- Use the `forge deploy` command when you want to persist code changes.
-- Use the `forge install` command when you want to install the app on a new site.
-- Once the app is installed on a site, the site picks up the new app changes you deploy without needing to rerun the install command.
-
-## Support
-
-See [Get help](https://developer.atlassian.com/platform/forge/get-help/) for how to get help and provide feedback.
+You can now go to your confluence main page and see "{your app name} (Development)" in your home feed. <br>
+There you'll have to authorize the app (if it doesn't show up immediately click "get tasks"). <br>
+After authorization you can create a task on a random confluence page. <br>
+Now you can use "get tasks" to verify that the oAuth scope `read:confluence-content.all` is present. <br>
+If you click on "convert something" you'll see the logs of how often the exact same storage format failed to convert and how many times it succeeded.

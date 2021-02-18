@@ -1,0 +1,16 @@
+modules:
+  confluence:homepageFeed:
+    - key: conversion-api-bug-homepage-hello-world
+      function: main
+      title: conversion-api-bug
+      description: A hello world homepage feed.
+  function:
+    - key: main
+      handler: index.run
+app:
+  id: ari:cloud:ecosystem::app/52cabc05-96e4-416e-ba78-8a4db518c30d
+  name: conversion-api-bug
+permissions:
+  scopes:
+    - read:confluence-content.all
+    - read:confluence-content.summary

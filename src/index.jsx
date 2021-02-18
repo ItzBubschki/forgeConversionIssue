@@ -1,4 +1,4 @@
-import ForgeUI, {Button, Fragment, HomepageFeed, render, Text} from '@forge/ui';
+import ForgeUI, {Button, Fragment, HomepageFeed, render} from '@forge/ui';
 import api from '@forge/api';
 
 const App = () => {

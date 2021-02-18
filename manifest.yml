@@ -7,9 +7,6 @@ modules:
   function:
     - key: main
       handler: index.run
-app:
-  id: ari:cloud:ecosystem::app/52cabc05-96e4-416e-ba78-8a4db518c30d
-  name: conversion-api-bug
 permissions:
   scopes:
     - read:confluence-content.all
